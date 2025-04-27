@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Bedrock Hub</title>
+    <!-- Poppins Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional 404 Page Styles */
+        .error-container {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .error-code {
+            font-size: 8rem;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 1rem;
+            position: relative;
+            color: #000;
+        }
+
+        .error-code::after {
+            content: "";
+            position: absolute;
+            bottom: 0.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background-color: #000;
+        }
+
+        .error-title {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #000;
+        }
+
+        .error-message {
+            font-size: 1.125rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .minecraft-block {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 2rem;
+            position: relative;
+            transform-style: preserve-3d;
+            transform: rotateX(-20deg) rotateY(30deg);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: rotateX(-20deg) rotateY(30deg) translateY(0);
+            }
+            50% {
+                transform: rotateX(-20deg) rotateY(30deg) translateY(-15px);
+            }
+        }
+
+        .face {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: #8B5A2B;
+            border: 2px solid #000;
+        }
+
+        .top {
+            transform: rotateX(90deg) translateZ(50px);
+            background-color: #8B5A2B;
+        }
+
+        .bottom {
+            transform: rotateX(-90deg) translateZ(50px);
+            background-color: #5D3A1A;
+        }
+
+        .front {
+            transform: translateZ(50px);
+            background-color: #8B5A2B;
+            background-image: 
+                linear-gradient(45deg, #5D3A1A 25%, transparent 25%),
+                linear-gradient(-45deg, #5D3A1A 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, #5D3A1A 75%),
+                linear-gradient(-45deg, transparent 75%, #5D3A1A 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+        }
+
+        .back {
+            transform: translateZ(-50px) rotateY(180deg);
+            background-color: #8B5A2B;
+        }
+
+        .left {
+            transform: rotateY(-90deg) translateZ(50px);
+            background-color: #7D4E23;
+        }
+
+        .right {
+            transform: rotateY(90deg) translateZ(50px);
+            background-color: #7D4E23;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        @media (max-width: 640px) {
+            .error-code {
+                font-size: 6rem;
+            }
+
+            .error-title {
+                font-size: 1.5rem;
+            }
+
+            .btn-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="navbar">
+                <a href="index.html" class="logo">Bedrock Hub</a>
+                
+                <nav class="nav-desktop">
+                    <a href="index.html" class="nav-link">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="blog.html" class="nav-link">
+                        <i class="fas fa-file-alt"></i>
+                        <span>Blog</span>
+                    </a>
+                    <a href="downloads.html" class="nav-link">
+                        <i class="fas fa-download"></i>
+                        <span>Downloads</span>
+                    </a>
+                    <a href="about.html" class="nav-link">
+                        <i class="fas fa-info-circle"></i>
+                        <span>About</span>
+                    </a>
+                </nav>
+                
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div class="nav-mobile">
+            <div class="container">
+                <nav>
+                    <a href="index.html" class="nav-link">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="blog.html" class="nav-link">
+                        <i class="fas fa-file-alt"></i>
+                        <span>Blog</span>
+                    </a>
+                    <a href="downloads.html" class="nav-link">
+                        <i class="fas fa-download"></i>
+                        <span>Downloads</span>
+                    </a>
+                    <a href="about.html" class="nav-link">
+                        <i class="fas fa-info-circle"></i>
+                        <span>About</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <div class="error-container">
+                <div class="minecraft-block">
+                    <div class="face top"></div>
+                    <div class="face bottom"></div>
+                    <div class="face front"></div>
+                    <div class="face back"></div>
+                    <div class="face left"></div>
+                    <div class="face right"></div>
+                </div>
+                <h1 class="error-code">404</h1>
+                <h2 class="error-title">Page Not Found</h2>
+                <p class="error-message">Oops! It seems like the block you're looking for has been mined or doesn't exist in this world.</p>
+                <div class="btn-container">
+                    <a href="index.html" class="btn">Return Home</a>
+                    <button onclick="goBack()" class="btn btn-outline">Go Back</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="copyright">© <span id="current-year"></span> Bedrock Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+    <script>
+        // Rotate the Minecraft block on mousemove
+        const block = document.querySelector('.minecraft-block');
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            
+            block.style.transform = `rotateX(${-20 + y * 10}deg) rotateY(${30 + x * 20}deg) translateY(${-15 * Math.sin(Date.now() / 1000)}px)`;
+        });
+
+        // Go back function
+        function goBack() {
+            if (window.history.length > 1) {
+                window.history.back();
+            } else {
+                window.location.href = 'index.html';
+            }
+        }
+    </script>
+</body>
+</html>
